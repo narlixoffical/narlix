@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>NARLIX — Film ve Diziler</title>
+<style>
+:root{--red:#e50914;--bg:#080808;--panel:#151515;--muted:#aaa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}
+header{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;position:absolute;z-index:3;top:0;width:100%;background:linear-gradient(#050505cc,transparent)}
+.logo{font-size:27px;font-weight:900;letter-spacing:1px;color:var(--red);text-decoration:none}.logo span{color:#fff}
+nav{display:flex;gap:20px;font-size:14px}nav a{color:#eee;text-decoration:none}nav a:hover{color:var(--red)}
+.hero{min-height:520px;display:flex;align-items:end;padding:120px 5% 65px;background:linear-gradient(90deg,#080808 0%,#080808d9 38%,#08080830 100%),linear-gradient(0deg,#080808 0%,transparent 55%),url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:590px}.eyebrow{color:#ff454b;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}.hero h1{font-size:clamp(42px,8vw,76px);margin:12px 0;line-height:.98;letter-spacing:-2px}.hero p{color:#ddd;line-height:1.65;max-width:490px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:4px;padding:13px 20px;font-weight:bold;font-size:15px;cursor:pointer}.primary{background:#fff;color:#111}.secondary{background:#333d;color:#fff}.btn:hover{filter:brightness(.85)}
+main{padding-bottom:50px}.section{padding:20px 5%}.section h2{font-size:22px;margin:10px 0 17px}.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.card{position:relative;overflow:hidden;border-radius:7px;background:#1b1b1b;min-height:170px;cursor:pointer;transition:transform .2s}.card:hover{transform:scale(1.035)}.card img{width:100%;height:100%;min-height:170px;object-fit:cover;display:block;position:absolute;inset:0}.card:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,#000e)}.card-title{position:absolute;bottom:12px;left:12px;right:8px;z-index:1;font-weight:bold;font-size:14px}.tag{position:absolute;top:9px;left:9px;z-index:1;background:var(--red);padding:5px 7px;border-radius:3px;font-size:10px;font-weight:bold}.notice{margin:22px 5%;padding:14px 16px;border:1px solid #333;border-radius:7px;color:#bbb;font-size:13px;line-height:1.6}.search-wrap{padding:95px 5% 20px}.search-wrap input{width:100%;padding:15px 16px;border-radius:5px;border:1px solid #444;background:#171717;color:white;font-size:16px;outline:none}.search-wrap input:focus{border-color:var(--red)}.hidden{display:none!important}footer{border-top:1px solid #242424;padding:25px 5%;color:#888;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){nav{gap:11px;font-size:12px}.logo{font-size:22px}.hero{min-height:470px;padding-bottom:45px;background-position:58% center}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card,.card img{min-height:210px}.section h2{font-size:19px}.hero p{font-size:14px}}
+@media(min-width:761px) and (max-width:1050px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#"><span>NARLIX</span><span style="color:#e50914">.</span><span>COM</span></a>
+<nav><a href="#home">Ana Sayfa</a><a href="#films">Filmler</a><a href="#series">Diziler</a></nav>
+</header>
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="eyebrow">Yeni keşifler burada</div>
+<h1>Hikâyeni<br>bul.</h1>
+<p>Film ve dizi dünyasını keşfet. NARLIX'in ilk önizleme sayfasına hoş geldin.</p>
+<div class="actions"><button class="btn primary" onclick="document.querySelector('#films').scrollIntoView({behavior:'smooth'})">▶ İçerikleri keşfet</button><button class="btn secondary" onclick="document.querySelector('#search').focus()">⌕ Ara</button></div>
+</div>
+</section>
+<div class="search-wrap"><input id="search" type="search" placeholder="Film veya kategori ara..." aria-label="Film ara"></div>
+<main>
+<section class="section" id="films"><h2>🎬 Öne Çıkanlar</h2><div class="cards">
+<article class="card" data-title="Gece Yolculuğu aksiyon"><img loading="lazy" src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=600&q=80" alt=""><span class="tag">ÖNE ÇIKAN</span><div class="card-title">Gece Yolculuğu</div></article>
+<article class="card" data-title="Derinlik gizem drama"><img loading="lazy" src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Derinlik</div></article>
+<article class="card" data-title="Son Görev aksiyon macera"><img loading="lazy" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Son Görev</div></article>
+<article class="card" data-title="Kayıp Şehir macera gizem"><img loading="lazy" src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Kayıp Şehir</div></article>
+<article class="card" data-title="Kızıl Ufuk bilim kurgu"><img loading="lazy" src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Kızıl Ufuk</div></article>
+</div></section>
+<section class="section" id="series"><h2>✨ Keşfetmeye Devam Et</h2><div class="cards">
+<article class="card" data-title="Doğa Belgeseli belgesel"><img loading="lazy" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Doğanın Sırları</div></article>
+<article class="card" data-title="Ufuk drama"><img loading="lazy" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Ufuk</div></article>
+<article class="card" data-title="Şehir Hikâyeleri drama"><img loading="lazy" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Şehir Hikâyeleri</div></article>
+<article class="card" data-title="Sonsuzluk bilim kurgu"><img loading="lazy" src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Sonsuzluk</div></article>
+<article class="card" data-title="Sessiz Orman gizem"><img loading="lazy" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt=""><div class="card-title">Sessiz Orman</div></article>
+</div></section>
+<div class="notice">Bu sayfa NARLIX için bir tasarım demosudur. Kartlardaki adlar örnektir; henüz gerçek film kataloğu, hesap sistemi veya video yayını içermez. Yalnızca yayınlama ve kullanma izniniz olan içerikleri ekleyin.</div>
+</main>
+<footer><span>© 2026 NARLIX.COM — Tasarım önizlemesi</span><span>Film keşif deneyimi</span></footer>
+<script>
+const search=document.getElementById('search');
+search.addEventListener('input',()=>{const q=search.value.trim().toLocaleLowerCase('tr');document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hidden',!c.dataset.title.toLocaleLowerCase('tr').includes(q)));});
+</script>
+</body>
+</html>
